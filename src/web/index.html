@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Two OpenRadioss impact models read from their decks and explained: geometry, materials, contacts, run settings, results, findings and a corrected version.">
+<title>OpenRadioss model report</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<header>
+  <h1>OpenRadioss model report <small id="subtitle"></small></h1>
+  <div class="switch" id="modelSwitch"></div>
+  <div class="spacer"></div>
+  <div class="switch" id="versionSwitch">
+    <button data-v="v0" class="on">v0 &mdash; original</button>
+    <button data-v="v0.1" disabled title="generated once the fixed decks have been run">v0.1 &mdash; fixed</button>
+  </div>
+</header>
+
+<nav class="steps" id="steps"></nav>
+
+<main>
+  <section class="step" data-step="0" id="step-model"></section>
+  <section class="step" data-step="1" id="step-geometry"></section>
+  <section class="step" data-step="2" id="step-materials"></section>
+  <section class="step" data-step="3" id="step-contacts"></section>
+  <section class="step" data-step="4" id="step-run"></section>
+  <section class="step" data-step="5" id="step-results"></section>
+  <section class="step" data-step="6" id="step-engineering"></section>
+  <section class="step" data-step="7" id="step-findings"></section>
+  <section class="step" data-step="8" id="step-compare"></section>
+</main>
+
+<footer>
+  <span>Models: <a href="https://openradioss.org/models/">OpenRadioss examples</a> &copy; Altair Engineering Inc., <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></span>
+  <span class="spacer"></span>
+  <span>Report and code: <a href="https://github.com/Karim-53/OpenRadioss-to-html">OpenRadioss-to-html</a> by <a href="https://www.linkedin.com/in/mohamedkarim-belaid">Mohamed Karim Belaid</a></span>
+</footer>
+
+<script src="assets/plotly.min.js"></script>
+<!--MODEL_SCRIPTS-->
+<script>window.MODEL_NAMES = __MODEL_NAMES__; window.REPORT_VERSION = __VERSION__;</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Pinned to the versions this was developed and tested against (Windows 11,
+# Python 3.12.10). Nothing here is optional and nothing here is unused.
+#
+#   python -m pip install -r requirements.txt
+#
+numpy==2.5.0          # node and connectivity arrays, geometry maths
+pandas==3.0.3         # the Engine cycle table and the T01 CSV
+plotly==7.1.0         # the interactive 3D views and charts, embedded offline
+matplotlib==3.11.2    # offscreen frame rendering for the stills and the video
+imageio==2.37.4       # writes the MP4
+imageio-ffmpeg==0.6.0 # the bundled ffmpeg binary imageio calls
+pytest==9.1.1         # the test suite
+
+# Not a Python package, and not required to build the report:
+#   the OpenRadioss binaries. Only `python src/main.py --run` and `--media`
+#   need them; the report falls back to deck-only analysis without them.
+#   `python src/main.py --check` says what is present and how to get the rest.

@@ -1,0 +1,13 @@
+# The example decks are downloaded, not stored: python src/fetch_models.py
+# Their folders also collect solver output and the built report data.
+/Bumper_Beam/
+/Cell_Phone_Drop/
+
+# Built by src/main.py; the published copy is docs/ (src/build_site.py)
+/index.html
+/assets/
+interaction.txt
+
+__pycache__/
+.pytest_cache/
+.venv/
