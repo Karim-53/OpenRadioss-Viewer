@@ -1,0 +1,5 @@
+export { Slide, Stack, Head, Say, Src } from './Slide.jsx'
+export { default as Shot } from './Shot.jsx'
+export { Mark, Legend } from './Legend.jsx'
+export { Stat, Stats, Callout, Video, Card, More, Views } from './Bits.jsx'
+export { F, Fis, Seen, QA } from './Fi.jsx'
