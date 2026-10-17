@@ -1,3 +1,6 @@
 node_modules/
 dist/
 shots_unused/
+
+# Local shortcut to the raw recording of the talk (lives outside the repo)
+*.lnk

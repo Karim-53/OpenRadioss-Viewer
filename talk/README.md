@@ -1,4 +1,4 @@
-# The talk: OpenRadioss Viewer in 30 slides
+# The talk: OpenRadioss Viewer in 26 slides
 
 A 60-minute presentation of this project: what the report finds in the two example decks, how
 the numbers are checked against the solver, what the fixes change, and the agent skill that
@@ -20,14 +20,23 @@ Pick one or both:
      repository to be public, or a paid plan.
   4. Optional: make each slide's kicker a link to the matching report page, so the deck and the
      report work side by side from one URL.
-- [ ] **Record it as a video** (about 15 minutes, the main path without the backup).
-  - Either a screen recording of the deck and the live report side by side, as presented,
-  - or generated: one PNG per slide (the headless-Edge command under "Checking the layout"),
-    the speaker notes read by a TTS voice, and `ffmpeg` to join them.
-  - Upload it (YouTube, unlisted is fine) and embed the link in the main README.
-- [ ] Before either goes public: the PhD paper 3 slide (`src/intro/phd_3.html`) presents a
-      manuscript that is still in submission. Decide whether to keep it, or drop it from
-      `src/slides/01_Intro.jsx`.
+- [ ] **Make the final video** from the recording that already exists.
+  - **The raw recording:** a screen capture of the whole talk presented live on 2026-10-08, in
+    two files (about 9 + 51 minutes, 105 MB + 424 MB): the deck on one half of the screen, the
+    live report on the other, with the voice-over. It is not in the repository (too large, and
+    it shows an earlier, privately branded version of the deck). On Karim's machine, the
+    shortcut **`talk/recording (raw talk video).lnk`** opens its folder (git-ignored, local only).
+  - **Edit before publishing:**
+    - Replace the opening title slide with this repository's title slide (`#/0`, render it with
+      the headless-Edge command under "Checking the layout").
+    - Cut the PhD overview (and any paper slide shown) that follows About me; this deck no
+      longer has them.
+    - Crop or blur the browser tab title, and cut anything that names the event or its people.
+    - Check the audio for voices other than the presenter, and cut them.
+    - Optionally trim to a ~15-minute cut of the main path (no backup, no Q&A).
+  - Upload it (YouTube, unlisted is fine) and embed the link in the main README and here.
+  - Fallback if the recording is unusable: one PNG per slide, the speaker notes read by a TTS
+    voice, and `ffmpeg` to join them.
 
 ## Present: half the screen each
 
@@ -44,8 +53,7 @@ page to show next to it, e.g. "Cell Phone · v0 · 2 Geometry".
 3. No full screen needed: the deck scales to whatever window it is in.
 
 Navigation is **2D**: columns go right (→), stacks go down (↓). Space / PageDown (a clicker's
-"next") walk every slide in reading order, down each stack. On the PhD slide, press → to skip
-the three optional paper slides below it.
+"next") walk every slide in reading order, down each stack.
 
 | Key | What it does |
 |---|---|
@@ -61,7 +69,7 @@ file, or serve the folder (`python -m http.server --directory dist 8767`, then o
 <http://localhost:8767>).
 
 Deep links work: `index.html#/3/2` is column 3, slide 2 (the phone's Geometry). The slide
-number (top right) counts the main path, 30 slides; the backup slides under the Q&A are
+number (top right) counts the main path, 26 slides; the backup slides under the Q&A are
 uncounted.
 
 **More details.** Some slides end with a dashed rule labelled "more details:". What sits below it
@@ -74,7 +82,7 @@ the keyboard focus, so Space still advances.
 | Col | File | Slides | Clock |
 |---|---|---|---|
 | 0 | `src/slides/00_Title.jsx` | Title | 0:00 |
-| 1 | `src/slides/01_Intro.jsx` | About me, PhD overview (+ 3 optional paper slides below) | 0:15 → 3:15 |
+| 1 | `src/slides/01_Intro.jsx` | About me: career in one slide | 0:30 → 2:00 |
 | 2 | `src/slides/03_Models.jsx` | The two models; the reader is a newcomer | 3:15 |
 | 3 | `src/slides/04_Phone.jsx` | 11: how the report reads, then the Cell Phone page by page; the Overview carries "what I built" (report, suggest fixes, recommend one, compare) on F-01; Engineering in three views; v0.1 results and where the blow goes | 4:15 → 24:30 |
 | 4 | `src/slides/05_Bumper.jsx` | 7: the Bumper Beam, only what is new: the annotated picture, materials (F-03), connections, run settings, the crash in curves, all 7 findings, the thickness study | 24:30 → 35:15 |
@@ -83,7 +91,9 @@ the keyboard focus, so Space still advances.
 | 7 | `08_RelatedWork.jsx` ↓ `10_Contribution.jsx` | one column: related work, each with the gap it leaves (NVIDIA's demo is a link to their video), then the contribution (one card per gap) | 38:15 → 42:15 |
 | 8 | `src/slides/11_QA.jsx` + `12_Backup.jsx` | thank you / Q&A; below it 17 backup slides: the phone's v0.2 decisions first, then the phone's v0.1 fixes, can we trust v0.1, the phone in one table, the bumper's v0.2, the skills it builds on, how I used AI, glossary, … | ~42:15 planned |
 
-The clock is the planned pace: about 42 minutes of talking. Showing the live report next to each
+The clock is the planned pace: about 42 minutes of talking. The cues in the speaker notes from
+slide 3 on still include the PhD overview that was removed, so the talk now runs about 1.5 minutes
+ahead of them. Showing the live report next to each
 slide (hover a marker, open a card, flip v0/v0.1) and answering questions during the talk usually adds
 8 to 12 minutes, so the 60-minute slot ends around 50 to 55 minutes. The slides cut for time live with
 their column's file (`PhoneV02`, `PhoneFixes`, `PhoneTrust`, `PhoneTable` in `04_Phone.jsx`, `BumperV02`
@@ -117,7 +127,7 @@ npm run build        # rewrites dist/index.html (single file) and copies public/
   `charts/EngVisuals.jsx` holds the three pictures of the Engineering switch. Their numbers live
   in `src/data/numbers.js`, each with the file it was read from; numbers computed after the
   report was built are marked `[MY]`.
-- `src/intro/`: the About me and PhD slides, re-flowed for 8:9.
+- `src/intro/`: the About me slide, re-flowed for 8:9.
 - `src/theme.css`: this deck's styles on top of `src/intro/intro.css`. Note: intro.css gives
   `.bar` a fixed width that CSS also applies to SVG `<rect>`s, so rect bars use the class `bx`.
 

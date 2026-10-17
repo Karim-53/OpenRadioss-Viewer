@@ -7,7 +7,7 @@ builds one interactive HTML report. The report covers what hits what, how fast a
 how the model is assembled, and which settings will shape the answer before the physics does.
 It lists what is wrong with the model, builds a corrected version, runs both and compares them.
 
-### ▶ [Open the live report](https://karim-53.github.io/OpenRadioss-Viewer/) · [The talk: 30 slides](talk/)
+### ▶ [Open the live report](https://karim-53.github.io/OpenRadioss-Viewer/) · [The talk: 26 slides](talk/)
 
 The report covers two public OpenRadioss example models: a bumper beam hitting a rigid pole, and
 a phone dropped onto a floor. It runs from `file://` with no server and no network, so GitHub
@@ -202,7 +202,7 @@ as `.h3d` gives rows nobody can train on.
 * **Automation and AI workflows:** one command from deck to report, a reproducible
   fix → run → compare loop, and an agent skill that runs the same workflow on a deck nobody has
   seen.
-* **Explaining it:** a report written for a newcomer, and a 30-slide talk that walks an
+* **Explaining it:** a report written for a newcomer, and a 26-slide talk that walks an
   audience through it.
 
 ## Quick start
@@ -266,7 +266,7 @@ same output). Given a new deck pair, it goes through these steps:
 
 ## The talk
 
-[`talk/`](talk/) holds a 30-slide presentation of this project (React + reveal.js), made to sit
+[`talk/`](talk/) holds a 26-slide presentation of this project (React + reveal.js), made to sit
 on one half of the screen with the live report on the other half: the slides give the overview,
 the report shows the page. It walks through the phone page by page, then only what is new on the
 bumper, the agent skill, related work, and a backup of 17 slides for questions.
