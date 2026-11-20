@@ -4,9 +4,14 @@
     python src/build_site.py    copy what the page loads into docs/
 
 The report already works from `file://` with no server, so a static host needs
-no change: only the files the page actually loads are copied - `index.html`,
-`assets/`, each model's `report/data*.js`, and the pictures and videos those
-data files name. Decks, solver output and frame caches stay behind.
+no change: only the files the page actually loads are copied - `index.html`
+(published as `report.html`), `assets/`, each model's `report/data*.js`, and the
+pictures and videos those data files name. Decks, solver output and frame caches
+stay behind.
+
+The site's home page is `src/web/landing.html` (published as `index.html`, with its
+pictures in `landing/`): it sends visitors to the talk first, then to the report.
+`docs/talk/` is built separately (see talk/README.md) and is kept across rebuilds.
 """
 
 from __future__ import annotations
@@ -18,6 +23,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+WEB = Path(__file__).resolve().parent / "web"
+KEEP = {"talk"}   # built by the talk's own build, not by this script
 MEDIA = re.compile(r"""[A-Za-z0-9_.-]+/media/[A-Za-z0-9_.=-]+\.(?:png|mp4)""")
 
 
@@ -25,9 +32,11 @@ def build(src: Path, out: Path) -> list[Path]:
     index = src / "index.html"
     if not index.exists():
         raise SystemExit(f"{index} not found; run python src/main.py first")
-    if out.exists():
-        shutil.rmtree(out)
-    out.mkdir(parents=True)
+    out.mkdir(parents=True, exist_ok=True)
+    for old in out.iterdir():
+        if old.name in KEEP:
+            continue
+        shutil.rmtree(old) if old.is_dir() else old.unlink()
     wanted = {Path("index.html")}
     wanted |= {p.relative_to(src) for p in (src / "assets").glob("*") if p.is_file()}
     data = sorted(src.glob("*/report/data*.js"))
@@ -39,9 +48,16 @@ def build(src: Path, out: Path) -> list[Path]:
         if not (src / rel).exists():
             print(f"  missing, skipped: {rel.as_posix()}", file=sys.stderr)
             continue
-        (out / rel).parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(src / rel, out / rel)
-        copied.append(out / rel)
+        dest = out / ("report.html" if rel == Path("index.html") else rel)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src / rel, dest)
+        copied.append(dest)
+    shutil.copyfile(WEB / "landing.html", out / "index.html")
+    copied.append(out / "index.html")
+    for pic in sorted((WEB / "landing").glob("*")):
+        (out / "landing").mkdir(exist_ok=True)
+        shutil.copyfile(pic, out / "landing" / pic.name)
+        copied.append(out / "landing" / pic.name)
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve files as they are
     return copied
 

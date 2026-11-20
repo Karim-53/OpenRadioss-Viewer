@@ -11,7 +11,7 @@ export default function Title() {
       cue="0:00 · ~30 s (About me has slack)"
       notes={
         <>
-          <p>Stand, breathe, smile. Laptop on: this deck on the left half of the screen, the live report (docs/index.html) on the right half.</p>
+          <p>Stand, breathe, smile. Laptop on: this deck on the left half of the screen, the live report (docs/report.html) on the right half.</p>
           <p>"Thank you for having me. The slides on the left give the overview; on the right is the report itself, and I'll show you each sentence there. In about 50 minutes: what I found in the two decks, how I checked it against the solver, what I fixed, and what I'd do next. I'll keep the end for your questions."</p>
           <p>Next = Space, →, ↓ or the clicker; back = ← or ↑. Every press is one slide in reading order, down each stack. To jump into a backup slide: O, then click it. S = speaker view, O = overview, F = full screen (of this half), B = black.</p>
         </>

@@ -7,7 +7,7 @@ builds one interactive HTML report. The report covers what hits what, how fast a
 how the model is assembled, and which settings will shape the answer before the physics does.
 It lists what is wrong with the model, builds a corrected version, runs both and compares them.
 
-### ▶ [Open the live report](https://karim-53.github.io/OpenRadioss-Viewer/) · [▶ The talk: 26 slides](https://karim-53.github.io/OpenRadioss-Viewer/talk/) ([source](talk/))
+### [▶ Watch the talk: 26 slides](https://karim-53.github.io/OpenRadioss-Viewer/talk/) · [Open the live report](https://karim-53.github.io/OpenRadioss-Viewer/report.html) · [Home page](https://karim-53.github.io/OpenRadioss-Viewer/)
 
 The report covers two public OpenRadioss example models: a bumper beam hitting a rigid pole, and
 a phone dropped onto a floor. It runs from `file://` with no server and no network, so GitHub
