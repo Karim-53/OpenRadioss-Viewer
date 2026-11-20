@@ -11,7 +11,7 @@ const SEE = [
 ]
 
 const KEYS = [
-  [<b key="p" className="watch-play">▶ Play</b>, 'bottom-left: the narrated talk, slide after slide, by itself'],
+  [<b key="p" className="watch-play">▶ Play</b>, 'bottom-left: the narrated talk plays by itself; pick the 8-minute phone drop or the full talk'],
   [<kbd key="f">F</kbd>, 'full screen'],
   [<><kbd>Space</kbd> <kbd>→</kbd></>, 'next slide'],
   [<kbd key="l">←</kbd>, 'previous slide'],

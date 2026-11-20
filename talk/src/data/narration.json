@@ -1,142 +1,226 @@
 {
- "slides": [
+ "versions": [
   {
-   "h": 1,
-   "v": 0,
-   "file": "media/narration/01-00.mp3",
-   "dur": 54.09
+   "id": "short-voice",
+   "label": "Phone drop \u00b7 AI voice",
+   "slides": [
+    {
+     "h": 1,
+     "v": 0,
+     "file": "media/narration/short-voice/01-00.mp3",
+     "dur": 35.28
+    },
+    {
+     "h": 2,
+     "v": 0,
+     "file": "media/narration/short-voice/02-00.mp3",
+     "dur": 49.02
+    },
+    {
+     "h": 2,
+     "v": 1,
+     "file": "media/narration/short-voice/02-01.mp3",
+     "dur": 47.95
+    },
+    {
+     "h": 2,
+     "v": 2,
+     "file": "media/narration/short-voice/02-02.mp3",
+     "dur": 49.95
+    },
+    {
+     "h": 2,
+     "v": 3,
+     "file": "media/narration/short-voice/02-03.mp3",
+     "dur": 34.88
+    },
+    {
+     "h": 2,
+     "v": 4,
+     "file": "media/narration/short-voice/02-04.mp3",
+     "dur": 51.55
+    },
+    {
+     "h": 2,
+     "v": 5,
+     "file": "media/narration/short-voice/02-05.mp3",
+     "dur": 44.22
+    },
+    {
+     "h": 2,
+     "v": 6,
+     "file": "media/narration/short-voice/02-06.mp3",
+     "dur": 22.22
+    },
+    {
+     "h": 2,
+     "v": 7,
+     "file": "media/narration/short-voice/02-07.mp3",
+     "dur": 41.28
+    },
+    {
+     "h": 2,
+     "v": 8,
+     "file": "media/narration/short-voice/02-08.mp3",
+     "dur": 32.08
+    },
+    {
+     "h": 2,
+     "v": 9,
+     "file": "media/narration/short-voice/02-09.mp3",
+     "dur": 40.48
+    },
+    {
+     "h": 2,
+     "v": 10,
+     "file": "media/narration/short-voice/02-10.mp3",
+     "dur": 45.42
+    }
+   ]
   },
   {
-   "h": 2,
-   "v": 0,
-   "file": "media/narration/02-00.mp3",
-   "dur": 219.96
-  },
-  {
-   "h": 2,
-   "v": 1,
-   "file": "media/narration/02-01.mp3",
-   "dur": 42.5
-  },
-  {
-   "h": 2,
-   "v": 2,
-   "file": "media/narration/02-02.mp3",
-   "dur": 299.86
-  },
-  {
-   "h": 2,
-   "v": 3,
-   "file": "media/narration/02-03.mp3",
-   "dur": 102.59
-  },
-  {
-   "h": 2,
-   "v": 4,
-   "file": "media/narration/02-04.mp3",
-   "dur": 189.02
-  },
-  {
-   "h": 2,
-   "v": 5,
-   "file": "media/narration/02-05.mp3",
-   "dur": 123.55
-  },
-  {
-   "h": 2,
-   "v": 6,
-   "file": "media/narration/02-06.mp3",
-   "dur": 53.48
-  },
-  {
-   "h": 2,
-   "v": 7,
-   "file": "media/narration/02-07.mp3",
-   "dur": 152.53
-  },
-  {
-   "h": 2,
-   "v": 8,
-   "file": "media/narration/02-08.mp3",
-   "dur": 47.09
-  },
-  {
-   "h": 2,
-   "v": 9,
-   "file": "media/narration/02-09.mp3",
-   "dur": 207.6
-  },
-  {
-   "h": 2,
-   "v": 10,
-   "file": "media/narration/02-10.mp3",
-   "dur": 75.39
-  },
-  {
-   "h": 3,
-   "v": 0,
-   "file": "media/narration/03-00.mp3",
-   "dur": 88.08
-  },
-  {
-   "h": 3,
-   "v": 1,
-   "file": "media/narration/03-01.mp3",
-   "dur": 179.0
-  },
-  {
-   "h": 3,
-   "v": 2,
-   "file": "media/narration/03-02.mp3",
-   "dur": 84.02
-  },
-  {
-   "h": 3,
-   "v": 3,
-   "file": "media/narration/03-03.mp3",
-   "dur": 84.76
-  },
-  {
-   "h": 3,
-   "v": 4,
-   "file": "media/narration/03-04.mp3",
-   "dur": 294.07
-  },
-  {
-   "h": 3,
-   "v": 5,
-   "file": "media/narration/03-05.mp3",
-   "dur": 60.31
-  },
-  {
-   "h": 3,
-   "v": 6,
-   "file": "media/narration/03-06.mp3",
-   "dur": 68.02
-  },
-  {
-   "h": 4,
-   "v": 0,
-   "file": "media/narration/04-00.mp3",
-   "dur": 177.51
-  },
-  {
-   "h": 5,
-   "v": 0,
-   "file": "media/narration/05-00.mp3",
-   "dur": 157.38
-  },
-  {
-   "h": 6,
-   "v": 0,
-   "file": "media/narration/06-00.mp3",
-   "dur": 118.7
-  },
-  {
-   "h": 6,
-   "v": 1,
-   "file": "media/narration/06-01.mp3",
-   "dur": 63.15
+   "id": "full",
+   "label": "Full talk \u00b7 my recording",
+   "slides": [
+    {
+     "h": 1,
+     "v": 0,
+     "file": "media/narration/full/01-00.mp3",
+     "dur": 54.09
+    },
+    {
+     "h": 2,
+     "v": 0,
+     "file": "media/narration/full/02-00.mp3",
+     "dur": 219.96
+    },
+    {
+     "h": 2,
+     "v": 1,
+     "file": "media/narration/full/02-01.mp3",
+     "dur": 42.5
+    },
+    {
+     "h": 2,
+     "v": 2,
+     "file": "media/narration/full/02-02.mp3",
+     "dur": 299.86
+    },
+    {
+     "h": 2,
+     "v": 3,
+     "file": "media/narration/full/02-03.mp3",
+     "dur": 102.59
+    },
+    {
+     "h": 2,
+     "v": 4,
+     "file": "media/narration/full/02-04.mp3",
+     "dur": 189.02
+    },
+    {
+     "h": 2,
+     "v": 5,
+     "file": "media/narration/full/02-05.mp3",
+     "dur": 123.55
+    },
+    {
+     "h": 2,
+     "v": 6,
+     "file": "media/narration/full/02-06.mp3",
+     "dur": 53.48
+    },
+    {
+     "h": 2,
+     "v": 7,
+     "file": "media/narration/full/02-07.mp3",
+     "dur": 152.53
+    },
+    {
+     "h": 2,
+     "v": 8,
+     "file": "media/narration/full/02-08.mp3",
+     "dur": 47.09
+    },
+    {
+     "h": 2,
+     "v": 9,
+     "file": "media/narration/full/02-09.mp3",
+     "dur": 207.6
+    },
+    {
+     "h": 2,
+     "v": 10,
+     "file": "media/narration/full/02-10.mp3",
+     "dur": 75.39
+    },
+    {
+     "h": 3,
+     "v": 0,
+     "file": "media/narration/full/03-00.mp3",
+     "dur": 88.08
+    },
+    {
+     "h": 3,
+     "v": 1,
+     "file": "media/narration/full/03-01.mp3",
+     "dur": 179.0
+    },
+    {
+     "h": 3,
+     "v": 2,
+     "file": "media/narration/full/03-02.mp3",
+     "dur": 84.02
+    },
+    {
+     "h": 3,
+     "v": 3,
+     "file": "media/narration/full/03-03.mp3",
+     "dur": 84.76
+    },
+    {
+     "h": 3,
+     "v": 4,
+     "file": "media/narration/full/03-04.mp3",
+     "dur": 294.07
+    },
+    {
+     "h": 3,
+     "v": 5,
+     "file": "media/narration/full/03-05.mp3",
+     "dur": 60.31
+    },
+    {
+     "h": 3,
+     "v": 6,
+     "file": "media/narration/full/03-06.mp3",
+     "dur": 68.02
+    },
+    {
+     "h": 4,
+     "v": 0,
+     "file": "media/narration/full/04-00.mp3",
+     "dur": 177.51
+    },
+    {
+     "h": 5,
+     "v": 0,
+     "file": "media/narration/full/05-00.mp3",
+     "dur": 157.38
+    },
+    {
+     "h": 6,
+     "v": 0,
+     "file": "media/narration/full/06-00.mp3",
+     "dur": 118.7
+    },
+    {
+     "h": 6,
+     "v": 1,
+     "file": "media/narration/full/06-01.mp3",
+     "dur": 63.15
+    }
+   ]
   }
  ]
 }
