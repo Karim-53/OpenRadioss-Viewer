@@ -10,10 +10,9 @@ repeats the workflow on a new deck. Built with React and reveal.js.
 
 ## TODO: make the talk reachable without cloning the repo
 
-Right now the deck only runs from a local build (`npm run build`, then open `dist/index.html`).
-Pick one or both:
+Live: **https://karim-53.github.io/OpenRadioss-Viewer/talk/** (rebuild with step 1 after any change).
 
-- [ ] **Publish it on GitHub Pages**, next to the report.
+- [x] **Publish it on GitHub Pages**, next to the report.
   1. Build into the published folder: `npx vite build --outDir ../docs/talk --emptyOutDir`.
   2. Link it from the main README: `https://karim-53.github.io/OpenRadioss-Viewer/talk/`.
   3. Switch Pages on (Settings → Pages → branch `main`, folder `/docs`). Pages needs the

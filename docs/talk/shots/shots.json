@@ -1,0 +1,158 @@
+{
+ "generated": "2026-09-29",
+ "source": "docs/index.html, the published report (captured headless with Edge at 1600x900, deviceScaleFactor 1.5)",
+ "notes": [
+  "Full-page shots are 2400x1350; *_pN.png are the same step scrolled down; crops (finding cards, tables, plots, tooltips) have their own size.",
+  "Captions quote numbers read from <Model>/report/model.json and model_v0.1.json.",
+  "bumper_v0_02_geometry_thickness_sheets.png is the only shot where the page state was altered in memory: spot-weld spring pseudo-parts were excluded from the thickness colour scale. The report file itself was never modified.",
+  "The phone offers no plastic-strain colouring in either version (peak_plastic_strain is empty for every phone part in model_v0.1.json), so no phone strain shot exists."
+ ],
+ "shots": [
+  {
+   "file": "phone_v0_02_geometry_marker_tip_crop.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "step": "Geometry",
+   "caption": "Error-marker tooltip (close-up) (phone drop, v0)",
+   "what_it_shows": "Crop of the tooltip next to the marker.",
+   "location": "public/shots"
+  },
+  {
+   "file": "phone_onepager.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0 + v0.1",
+   "step": "One-pager",
+   "caption": "One-page summary of the phone drop (report/onepager.html)",
+   "what_it_shows": "Printable A4 summary: one-sentence scenario, KPI tiles, peak-stress still, how it is built, what the v0 run shows, what needs attention, and the v0.1 fixes with their result.",
+   "location": "public/shots"
+  },
+  {
+   "file": "bumper_onepager.png",
+   "model": "Bumper_Beam",
+   "version": "v0 + v0.1",
+   "step": "One-pager",
+   "caption": "One-page summary of the bumper beam (report/onepager.html)",
+   "what_it_shows": "Printable A4 summary: one-sentence scenario, KPI tiles, peak-stress still, how it is built, what the v0 run shows, what needs attention, and the v0.1 fixes with their result.",
+   "location": "public/shots"
+  }
+ ],
+ "media": [
+  {
+   "file": "../media/phone_preview.png",
+   "model": "Cell_Phone_Drop",
+   "version": "model",
+   "caption": "Preview render of the phone drop model before the run (parts coloured, rigid wall shown)"
+  },
+  {
+   "file": "../media/phone_still_v0.1_end.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0.1",
+   "caption": "Still of the phone drop v0.1 run at \"end\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0.1_first_contact.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0.1",
+   "caption": "Still of the phone drop v0.1 run at \"first contact\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0.1_peak_stress.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0.1",
+   "caption": "Still of the phone drop v0.1 run at \"peak stress\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0.1_start.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0.1",
+   "caption": "Still of the phone drop v0.1 run at \"start\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0_end.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "caption": "Still of the phone drop v0 run at \"end\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0_first_contact.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "caption": "Still of the phone drop v0 run at \"first contact\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0_peak_stress.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "caption": "Still of the phone drop v0 run at \"peak stress\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_still_v0_start.png",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "caption": "Still of the phone drop v0 run at \"start\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/phone_v0.1.mp4",
+   "model": "Cell_Phone_Drop",
+   "version": "v0.1",
+   "caption": "Deformation video of the phone drop, v0.1 run, coloured by von Mises stress (from Cell_Phone_Drop/media/)",
+   "duration_s": 3.25,
+   "size_px": [
+    960,
+    608
+   ]
+  },
+  {
+   "file": "../media/phone_v0.mp4",
+   "model": "Cell_Phone_Drop",
+   "version": "v0",
+   "caption": "Deformation video of the phone drop, v0 run, coloured by von Mises stress (from Cell_Phone_Drop/media/)",
+   "duration_s": 2.5,
+   "size_px": [
+    960,
+    608
+   ]
+  },
+  {
+   "file": "../media/bumper_preview.png",
+   "model": "Bumper_Beam",
+   "version": "model",
+   "caption": "Preview render of the bumper beam model before the run (parts coloured, rigid wall shown)"
+  },
+  {
+   "file": "../media/bumper_still_v0.1_end.png",
+   "model": "Bumper_Beam",
+   "version": "v0.1",
+   "caption": "Still of the bumper beam v0.1 run at \"end\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/bumper_still_v0.1_first_contact.png",
+   "model": "Bumper_Beam",
+   "version": "v0.1",
+   "caption": "Still of the bumper beam v0.1 run at \"first contact\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/bumper_still_v0.1_peak_stress.png",
+   "model": "Bumper_Beam",
+   "version": "v0.1",
+   "caption": "Still of the bumper beam v0.1 run at \"peak stress\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/bumper_still_v0.1_start.png",
+   "model": "Bumper_Beam",
+   "version": "v0.1",
+   "caption": "Still of the bumper beam v0.1 run at \"start\", coloured by von Mises stress"
+  },
+  {
+   "file": "../media/bumper_v0.1.mp4",
+   "model": "Bumper_Beam",
+   "version": "v0.1",
+   "caption": "Deformation video of the bumper beam, v0.1 run, coloured by von Mises stress (from Bumper_Beam/media/)",
+   "duration_s": 3.25,
+   "size_px": [
+    960,
+    608
+   ]
+  }
+ ]
+}
