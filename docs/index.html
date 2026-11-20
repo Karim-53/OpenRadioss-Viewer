@@ -42,6 +42,17 @@
   .primary .cta { background: var(--accent); color: var(--accent-ink); padding: .55rem 1.1rem; border-radius: 999px; }
   footer { margin-top: 2.5rem; color: var(--ink-2); font-size: .92rem; }
   footer a { color: var(--accent); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+  .btn { display: inline-block; text-decoration: none; font-weight: 700; padding: .65rem 1.2rem; border-radius: 999px; border: 1.5px solid var(--accent); color: var(--accent); background: var(--surface); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  h2.section { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin: 2.6rem 0 .9rem; }
+  .nut { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 860px) { .nut { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .nut { grid-template-columns: 1fr; } }
+  .nut div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; }
+  .nut b { display: block; font-size: 1.02rem; margin-bottom: .3rem; }
+  .nut p { margin: 0; color: var(--ink-2); font-size: .95rem; }
+  .nut .big { font-size: 1.7rem; font-weight: 800; color: var(--accent); line-height: 1.1; display: block; margin-bottom: .2rem; }
 </style>
 </head>
 <body>
@@ -51,18 +62,40 @@
   <p class="lead">Two public OpenRadioss impact models, a bumper beam and a dropped phone, read from their
     decks and explained to an engineer who opens one for the first time.</p>
   <p class="by">Mohamed Karim Belaid</p>
+  <div class="hero-actions">
+    <a class="btn primary" href="talk/">▶ Watch the talk</a>
+    <a class="btn" href="report.html">Open the interactive report ↗</a>
+  </div>
 
-  <div class="cards">
+  <h2 class="section">In a nutshell</h2>
+  <div class="nut">
+    <div><b>The problem</b><p>Both decks run to "normal termination" and every line is legal on its own.
+      The mistakes only show when the values are read together, against the question the model should answer.</p></div>
+    <div><b>What the tool does</b><p>Parses the model file and the run file, explains them in nine steps, marks
+      every problem where it appears, proposes fixes, builds a corrected v0.1, runs both and compares them.</p></div>
+    <div><span class="big">0.1 ms</span><b>Phone drop: the run ends mid-impact</b><p>93 % of the energy is still motion when it
+      stops; the battery and a chip, 24 % of the mass, are tied to nothing; 16 of 17 materials can never break.</p></div>
+    <div><span class="big">0.50 → 0.12</span><b>Bumper: the wrong tear limit</b><p>The ultra-high-strength DP1000 beam had the
+      tear limit of a softer DP600 steel, and every "force" column was really a running total.</p></div>
+    <div><span class="big">0.000 %</span><b>Checked against the solver</b><p>Node and element counts and every part's mass
+      reconcile with the solver's own listing; after the fixes the phone's energy balance closes to 0.3 %.</p></div>
+    <div><span class="big">−20 %</span><b>Design study</b><p>With 20 % thinner steel the car is not stopped within 100 ms; with
+      20 % more it only stops sooner. An agent skill repeats the whole workflow on a new deck.</p></div>
+  </div>
+
+  <h2 class="section">Start here</h2>
+
+  <div class="cards" style="margin-top:0">
     <a class="card primary" href="talk/">
       <div class="pic">
         <img src="landing/bumper_overview.png" alt="Talk slide: a 2 m steel beam on two crash boxes hits a rigid pole">
         <span class="play" aria-hidden="true"></span>
-        <span class="badge">26 slides · narrated</span>
+        <span class="badge">26 slides</span>
       </div>
       <div class="body">
         <h2>Start here: the talk</h2>
         <p>What the tool finds in both models, how the numbers are checked against the solver, what the fixes
-          change, and the agent skill that repeats the workflow on a new deck. Press play and it advances by itself.</p>
+          change, and the agent skill that repeats the workflow on a new deck.</p>
         <span class="cta">▶ Watch the talk</span>
       </div>
     </a>
