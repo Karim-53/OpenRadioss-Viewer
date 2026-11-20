@@ -18,6 +18,8 @@
   h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.08; margin: .4rem 0 .8rem; letter-spacing: -.03em; }
   .lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--ink-2); max-width: 46ch; margin: 0; }
   .by { margin-top: 1rem; font-weight: 600; }
+  .pitch { font-size: clamp(1.08rem, 2.2vw, 1.3rem); line-height: 1.6; max-width: 62ch; margin: .2rem 0 0; color: var(--ink); }
+  .pitch b { color: var(--accent); }
   .cards { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.25rem; margin-top: 2.2rem; }
   @media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
   .card {
@@ -59,12 +61,15 @@
 <main>
   <div class="eyebrow">OpenRadioss Viewer</div>
   <h1>Reading a crash deck cold</h1>
-  <p class="lead">Two public OpenRadioss impact models, a bumper beam and a dropped phone, read from their
-    decks and explained to an engineer who opens one for the first time.</p>
+  <p class="pitch"><b>OpenRadioss Viewer</b> helps a mechanical engineer quickly explore, visualise and understand
+    a crash-simulation file, like a phone dropped on the floor or a car bumper hitting a pole. It reads the model and
+    run files, shows the parts in 3D, and flags the problems that would make the answer wrong: a run that stops
+    mid-impact, parts tied to nothing, a steel that tears at the wrong limit. For each problem you pick a suggested
+    quick fix or write your own note; an AI agent applies them, re-runs the solver and compares before and after.</p>
   <p class="by">Mohamed Karim Belaid</p>
   <div class="hero-actions">
-    <a class="btn primary" href="talk/">▶ Watch the talk</a>
-    <a class="btn" href="report.html">Open the interactive report ↗</a>
+    <a class="btn primary" href="talk/">▶ Watch the talk (24 slides)</a>
+    <a class="btn" href="report.html">Open the live report ↗</a>
   </div>
 
   <h2 class="section">In a nutshell</h2>
@@ -90,7 +95,7 @@
       <div class="pic">
         <img src="landing/bumper_overview.png" alt="Talk slide: a 2 m steel beam on two crash boxes hits a rigid pole">
         <span class="play" aria-hidden="true"></span>
-        <span class="badge">26 slides</span>
+        <span class="badge">24 slides</span>
       </div>
       <div class="body">
         <h2>Start here: the talk</h2>
