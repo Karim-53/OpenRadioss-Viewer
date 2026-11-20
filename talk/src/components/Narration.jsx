@@ -45,7 +45,8 @@ export default function Narration({ deck }) {
     const file = verRef.current.slides[i].file
     if (!a.src.endsWith(file)) a.src = file
     setState((s) => ({ ...s, i }))
-    if (autoplay) a.play().catch(() => {})
+    // blocked by the browser (no click yet): show Play again, not Pause. A clip swapped mid-load (AbortError) is fine.
+    if (autoplay) a.play().catch((e) => { if (e && e.name === 'NotAllowedError') stop() })
     return undefined
   }
 
