@@ -1399,6 +1399,7 @@ function boot() {
     if (e.key === 'ArrowRight' || e.key === 'PageDown') show(Math.min(STEPS.length - 1, state.step + 1));
     if (e.key === 'ArrowLeft' || e.key === 'PageUp') show(Math.max(0, state.step - 1));
   });
-  selectModel(window.MODEL_NAMES[0]);
+  /* Open on the phone (the talk walks through it first); any other deck set opens on its first model. */
+  selectModel(window.MODEL_NAMES.find(n => /phone/i.test(n)) || window.MODEL_NAMES[0]);
 }
 document.addEventListener('DOMContentLoaded', boot);

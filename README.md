@@ -9,7 +9,7 @@ It lists what is wrong with the model, builds a corrected version, runs both and
 
 <table>
   <tr>
-    <td width="34%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/"><img src="img/readme/talk.png" alt="Watch the talk: 24 slides" /></a><br/><b>▶ <a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/">Watch the talk</a></b> (24 slides)</td>
+    <td width="34%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/"><img src="img/readme/talk.png" alt="Watch the talk: 24 slides" /></a><br/><b>▶ <a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/">Watch the talk</a></b> (24 slides, narrated)</td>
     <td width="33%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/report.html"><img src="img/readme/report.png" alt="Open the live report" /></a><br/><b>↗ <a href="https://karim-53.github.io/OpenRadioss-Viewer/report.html">Open the live report</a></b></td>
     <td width="33%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/"><img src="img/readme/home.png" alt="Home page: the project in a nutshell" /></a><br/><b>↗ <a href="https://karim-53.github.io/OpenRadioss-Viewer/">Home page</a></b></td>
   </tr>
@@ -303,8 +303,9 @@ Details in [`talk/README.md`](talk/README.md).
       (`npx vite build --outDir ../docs/talk --emptyOutDir`).
 - [x] **GitHub Pages on** (`main`, `/docs`): a home page ([`src/web/landing.html`](src/web/landing.html)),
       the report at `report.html` and the talk at `talk/`. `python src/build_site.py` rebuilds all but the talk.
-- [ ] **Narrate the talk:** one audio clip per slide, cut from the recorded rehearsal with the fillers and
-      long pauses removed; the deck's ▶ Play button plays them and moves on by itself.
+- [x] **Narrate the talk:** one audio clip per slide (`talk/public/media/narration/`, 49 min), cut from a
+      recorded rehearsal with the fillers and long pauses removed; the deck's ▶ Play button plays them
+      and moves on by itself.
 - [ ] **A short cut** of the talk (about 15 minutes, main path only) for a first look.
 - [ ] **Give `src/fetch_models.py` a working source.** The OpenRadioss wiki space it downloads
       from is now locked (the OpenRadioss site redirects to Siemens), so the download fails. The

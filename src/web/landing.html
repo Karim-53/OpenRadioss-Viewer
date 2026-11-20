@@ -18,6 +18,8 @@
   h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.08; margin: .4rem 0 .8rem; letter-spacing: -.03em; }
   .lead { font-size: clamp(1.05rem, 2.2vw, 1.3rem); color: var(--ink-2); max-width: 46ch; margin: 0; }
   .by { margin-top: 1rem; font-weight: 600; }
+  .by a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  .by a:hover { color: var(--accent); }
   .pitch { font-size: clamp(1.08rem, 2.2vw, 1.3rem); line-height: 1.6; max-width: 62ch; margin: .2rem 0 0; color: var(--ink); }
   .pitch b { color: var(--accent); }
   .cards { display: grid; grid-template-columns: 1.15fr 1fr; gap: 1.25rem; margin-top: 2.2rem; }
@@ -66,28 +68,7 @@
     run files, shows the parts in 3D, and flags the problems that would make the answer wrong: a run that stops
     mid-impact, parts tied to nothing, a steel that tears at the wrong limit. For each problem you pick a suggested
     quick fix or write your own note; an AI agent applies them, re-runs the solver and compares before and after.</p>
-  <p class="by">Mohamed Karim Belaid</p>
-  <div class="hero-actions">
-    <a class="btn primary" href="talk/">▶ Watch the talk (24 slides)</a>
-    <a class="btn" href="report.html">Open the live report ↗</a>
-  </div>
-
-  <h2 class="section">In a nutshell</h2>
-  <div class="nut">
-    <div><b>The problem</b><p>Both decks run to "normal termination" and every line is legal on its own.
-      The mistakes only show when the values are read together, against the question the model should answer.</p></div>
-    <div><b>What the tool does</b><p>Parses the model file and the run file, explains them in nine steps, marks
-      every problem where it appears, proposes fixes, builds a corrected v0.1, runs both and compares them.</p></div>
-    <div><span class="big">0.1 ms</span><b>Phone drop: the run ends mid-impact</b><p>93 % of the energy is still motion when it
-      stops; the battery and a chip, 24 % of the mass, are tied to nothing; 16 of 17 materials can never break.</p></div>
-    <div><span class="big">0.50 → 0.12</span><b>Bumper: the wrong tear limit</b><p>The ultra-high-strength DP1000 beam had the
-      tear limit of a softer DP600 steel, and every "force" column was really a running total.</p></div>
-    <div><span class="big">0.000 %</span><b>Checked against the solver</b><p>Node and element counts and every part's mass
-      reconcile with the solver's own listing; after the fixes the phone's energy balance closes to 0.3 %.</p></div>
-    <div><span class="big">−20 %</span><b>Design study</b><p>With 20 % thinner steel the car is not stopped within 100 ms; with
-      20 % more it only stops sooner. An agent skill repeats the whole workflow on a new deck.</p></div>
-  </div>
-
+  <p class="by"><a href="https://www.linkedin.com/in/mohamedkarim-belaid">Mohamed Karim Belaid</a></p>
   <h2 class="section">Start here</h2>
 
   <div class="cards" style="margin-top:0">
@@ -95,12 +76,12 @@
       <div class="pic">
         <img src="landing/bumper_overview.png" alt="Talk slide: a 2 m steel beam on two crash boxes hits a rigid pole">
         <span class="play" aria-hidden="true"></span>
-        <span class="badge">24 slides</span>
+        <span class="badge">24 slides · narrated · 49 min</span>
       </div>
       <div class="body">
         <h2>Start here: the talk</h2>
         <p>What the tool finds in both models, how the numbers are checked against the solver, what the fixes
-          change, and the agent skill that repeats the workflow on a new deck.</p>
+          change, and the agent skill that repeats the workflow on a new deck. Press ▶ Play and it moves on by itself.</p>
         <span class="cta">▶ Watch the talk</span>
       </div>
     </a>
