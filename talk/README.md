@@ -1,4 +1,4 @@
-# The talk: OpenRadioss Viewer in 26 slides
+# The talk: OpenRadioss Viewer in 24 slides
 
 A 60-minute presentation of this project: what the report finds in the two example decks, how
 the numbers are checked against the solver, what the fixes change, and the agent skill that
@@ -67,8 +67,8 @@ If the speaker view does not open, the browser blocked the pop-up: allow pop-ups
 file, or serve the folder (`python -m http.server --directory dist 8767`, then open
 <http://localhost:8767>).
 
-Deep links work: `index.html#/3/2` is column 3, slide 2 (the phone's Geometry). The slide
-number (top right) counts the main path, 26 slides; the backup slides under the Q&A are
+Deep links work: `index.html#/2/2` is column 2, slide 2 (the phone's Geometry). The slide
+number (top right) counts the main path, 24 slides; the backup slides after the last one are
 uncounted.
 
 **More details.** Some slides end with a dashed rule labelled "more details:". What sits below it

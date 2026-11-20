@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Reveal from 'reveal.js'
 import RevealNotes from 'reveal.js/plugin/notes/notes.esm.js'
 
@@ -13,7 +13,6 @@ import './intro/intro.css' // the intro slides' theme: tokens, type scale, panel
 import './theme.css' // this deck's additions on top of it (8:9 canvas)
 
 import Title from './slides/00_Title.jsx'
-import Intro from './slides/01_Intro.jsx'
 import Models from './slides/03_Models.jsx'
 import Phone from './slides/04_Phone.jsx'
 import Bumper from './slides/05_Bumper.jsx'
@@ -23,6 +22,7 @@ import RelatedWork from './slides/08_RelatedWork.jsx'
 import Contribution from './slides/10_Contribution.jsx'
 import QA from './slides/11_QA.jsx'
 import { Stack } from './components'
+import Narration from './components/Narration.jsx'
 
 // 8:9 = half of a 16:9 screen: the talk on one half, the live report on the other.
 // 640 x 720 keeps text as large on half a screen as the old 1280 x 720 deck was on a full one.
@@ -50,8 +50,8 @@ const CONFIG = {
 // One label per column, in the same order as the sections in <App/> below. Shown above each
 // column in the Esc overview (reveal.js draws no column titles of its own).
 const COLUMN_TITLES = [
-  'Title', 'About me', 'The two models', 'Cell Phone', 'Bumper Beam',
-  'The agent skill', 'Future work', 'Related work + gap, contribution', 'Q&A + backup',
+  'How to watch', 'The two models', 'Cell Phone', 'Bumper Beam',
+  'The agent skill', 'Future work', 'Related work + gap, contribution', 'Backup',
 ]
 
 /**
@@ -64,10 +64,11 @@ const COLUMN_TITLES = [
 export default function App() {
   const deckRef = useRef(null)
   const titlesRef = useRef(null)
+  const [deck, setDeck] = useState(null)
 
   useEffect(() => {
     const deck = new Reveal(deckRef.current, CONFIG)
-    deck.initialize()
+    deck.initialize().then(() => setDeck(deck))
 
     // Column titles for the overview: HTML labels laid over the page, so they stay readable at the
     // overview's small scale. Each one sits above the first slide of its column and follows it while
@@ -108,6 +109,7 @@ export default function App() {
     deck.on('resize', track)
 
     return () => {
+      setDeck(null)
       cancelAnimationFrame(raf)
       try {
         deck.destroy()
@@ -121,7 +123,6 @@ export default function App() {
     <div className="reveal" ref={deckRef}>
       <div className="slides">
         <Title />
-        <Intro />
         <Models />
         <Phone />
         <Bumper />
@@ -138,6 +139,7 @@ export default function App() {
           <div className="col-title" key={t}><span>{i}</span> {t}</div>
         ))}
       </div>
+      {deck && <Narration deck={deck} />}
     </div>
   )
 }

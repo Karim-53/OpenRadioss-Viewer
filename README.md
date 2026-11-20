@@ -7,7 +7,13 @@ builds one interactive HTML report. The report covers what hits what, how fast a
 how the model is assembled, and which settings will shape the answer before the physics does.
 It lists what is wrong with the model, builds a corrected version, runs both and compares them.
 
-### [▶ Watch the talk: 26 slides](https://karim-53.github.io/OpenRadioss-Viewer/talk/) · [Open the live report](https://karim-53.github.io/OpenRadioss-Viewer/report.html) · [Home page](https://karim-53.github.io/OpenRadioss-Viewer/)
+<table>
+  <tr>
+    <td width="34%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/"><img src="img/readme/talk.png" alt="Watch the talk: 24 slides" /></a><br/><b>▶ <a href="https://karim-53.github.io/OpenRadioss-Viewer/talk/">Watch the talk</a></b> (24 slides)</td>
+    <td width="33%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/report.html"><img src="img/readme/report.png" alt="Open the live report" /></a><br/><b>↗ <a href="https://karim-53.github.io/OpenRadioss-Viewer/report.html">Open the live report</a></b></td>
+    <td width="33%" align="center"><a href="https://karim-53.github.io/OpenRadioss-Viewer/"><img src="img/readme/home.png" alt="Home page: the project in a nutshell" /></a><br/><b>↗ <a href="https://karim-53.github.io/OpenRadioss-Viewer/">Home page</a></b></td>
+  </tr>
+</table>
 
 The report covers two public OpenRadioss example models: a bumper beam hitting a rigid pole, and
 a phone dropped onto a floor. It runs from `file://` with no server and no network, so GitHub
@@ -202,7 +208,7 @@ as `.h3d` gives rows nobody can train on.
 * **Automation and AI workflows:** one command from deck to report, a reproducible
   fix → run → compare loop, and an agent skill that runs the same workflow on a deck nobody has
   seen.
-* **Explaining it:** a report written for a newcomer, and a 26-slide talk that walks an
+* **Explaining it:** a report written for a newcomer, and a 24-slide talk that walks an
   audience through it.
 
 ## Quick start
@@ -266,7 +272,7 @@ same output). Given a new deck pair, it goes through these steps:
 
 ## The talk
 
-[`talk/`](talk/) holds a 26-slide presentation of this project (React + reveal.js), made to sit
+[`talk/`](talk/) holds a 24-slide presentation of this project (React + reveal.js), made to sit
 on one half of the screen with the live report on the other half: the slides give the overview,
 the report shows the page. It walks through the phone page by page, then only what is new on the
 bumper, the agent skill, related work, and a backup of 17 slides for questions.
@@ -293,10 +299,13 @@ Details in [`talk/README.md`](talk/README.md).
 
 ## TODO
 
-- [ ] **Put the talk online**, as a GitHub Pages page next to the report (`docs/talk/`) or as a
-      recorded video. The steps for both are in [`talk/README.md`](talk/README.md).
-- [ ] **Switch GitHub Pages on** (Settings → Pages → `main`, `/docs`) once the repository is
-      public. The "Open the live report" link above needs it.
+- [x] **Talk online** on GitHub Pages: [`docs/talk/`](docs/talk/), built from [`talk/`](talk/)
+      (`npx vite build --outDir ../docs/talk --emptyOutDir`).
+- [x] **GitHub Pages on** (`main`, `/docs`): a home page ([`src/web/landing.html`](src/web/landing.html)),
+      the report at `report.html` and the talk at `talk/`. `python src/build_site.py` rebuilds all but the talk.
+- [ ] **Narrate the talk:** one audio clip per slide, cut from the recorded rehearsal with the fillers and
+      long pauses removed; the deck's ▶ Play button plays them and moves on by itself.
+- [ ] **A short cut** of the talk (about 15 minutes, main path only) for a first look.
 - [ ] **Give `src/fetch_models.py` a working source.** The OpenRadioss wiki space it downloads
       from is now locked (the OpenRadioss site redirects to Siemens), so the download fails. The
       SHA-256 checks stay valid. Options: a new official URL, or ship the four decks in the

@@ -471,3 +471,41 @@ table.thin tr.bad td:last-child { color: var(--err); font-weight: 600; }
   background: var(--panel); border: 1px solid var(--line); color: var(--accent); font-size: 15px; font-weight: 700;
   line-height: 1.35; text-decoration: none; }
 .rw .rw-link span { font-size: 12px; font-weight: 500; color: var(--muted); }
+
+/* Narration player (components/Narration.jsx): bottom-left, clear of reveal's arrows and slide number. */
+.narration {
+  position: fixed; left: 14px; bottom: 14px; z-index: 40;
+  display: flex; align-items: center; gap: 6px; overflow: hidden;
+  padding: 6px 12px 8px 6px; border-radius: 999px;
+  background: rgba(255, 255, 255, .94); border: 1px solid #d5dbe1;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+  font: 500 13px/1 Inter, system-ui, sans-serif; color: #18202a;
+}
+.narration__play {
+  font: 700 13.5px/1 Inter, system-ui, sans-serif; color: #fff; background: var(--accent, #0f766e);
+  border: 0; border-radius: 999px; padding: 9px 14px; cursor: pointer;
+}
+.narration__btn { border: 0; background: transparent; font-size: 15px; cursor: pointer; padding: 6px; color: #18202a; border-radius: 999px; }
+.narration__btn:hover { background: #eef1f4; }
+.narration__time { font-variant-numeric: tabular-nums; color: #5b6573; white-space: nowrap; }
+.narration__bar { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent, #0f766e); transition: width .25s linear; }
+.reveal.overview .narration, .narration:empty { display: none; }
+@media print { .narration { display: none; } }
+
+/* Slide 1: what you will see + how to watch (slides/00_Title.jsx) */
+.reveal .watch-frame { padding: 34px 44px 26px; justify-content: flex-start; height: 100%; }
+.reveal .watch-frame .kicker { font-size: 13px; }
+.reveal .watch-frame .watch-title { font-size: 38px; font-weight: 700; line-height: 1.08; margin: 6px 0 10px; }
+.reveal .watch-frame .watch-sub { font-size: 16px; line-height: 1.45; color: var(--muted); margin: 0; }
+.reveal .watch-frame .watch-h { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 20px 0 8px; }
+.reveal .watch-frame .watch-top { display: flex; justify-content: space-between; align-items: baseline; }
+.reveal .watch-frame .watch-date { font-size: 13px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.reveal .watch-frame .watch-me { margin: 16px 0 0; padding: 10px 14px; border-left: 3px solid var(--accent); background: #f3f8f7; border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.45; }
+.reveal .watch-frame .watch-see { margin: 0; padding-left: 22px; font-size: 14.5px; line-height: 1.35; }
+.reveal .watch-frame .watch-see li { margin: 2px 0; }
+.reveal .watch-frame .watch-keys { border-collapse: collapse; font-size: 14.5px; margin: 0; }
+.reveal .watch-frame .watch-keys td { padding: 3px 14px 3px 0; vertical-align: middle; border: 0; }
+.reveal .watch-frame .watch-keys td:first-child { white-space: nowrap; }
+.reveal .watch-frame kbd { display: inline-block; min-width: 26px; text-align: center; font: 600 13px/1 Inter, sans-serif; padding: 5px 7px; border: 1px solid #c9d1d9; border-bottom-width: 2px; border-radius: 6px; background: #f6f8fa; }
+.reveal .watch-frame .watch-play { display: inline-block; background: var(--accent); color: #fff; font-size: 13px; padding: 6px 11px; border-radius: 999px; }
+.reveal .watch-frame .watch-foot { margin: auto 0 0; font-size: 13px; color: var(--muted); }
