@@ -1,86 +1,8 @@
 {
  "versions": [
   {
-   "id": "short-voice",
-   "label": "Phone drop \u00b7 AI voice",
-   "slides": [
-    {
-     "h": 1,
-     "v": 0,
-     "file": "media/narration/short-voice/01-00.mp3",
-     "dur": 35.28
-    },
-    {
-     "h": 2,
-     "v": 0,
-     "file": "media/narration/short-voice/02-00.mp3",
-     "dur": 49.02
-    },
-    {
-     "h": 2,
-     "v": 1,
-     "file": "media/narration/short-voice/02-01.mp3",
-     "dur": 47.95
-    },
-    {
-     "h": 2,
-     "v": 2,
-     "file": "media/narration/short-voice/02-02.mp3",
-     "dur": 49.95
-    },
-    {
-     "h": 2,
-     "v": 3,
-     "file": "media/narration/short-voice/02-03.mp3",
-     "dur": 34.88
-    },
-    {
-     "h": 2,
-     "v": 4,
-     "file": "media/narration/short-voice/02-04.mp3",
-     "dur": 51.55
-    },
-    {
-     "h": 2,
-     "v": 5,
-     "file": "media/narration/short-voice/02-05.mp3",
-     "dur": 44.22
-    },
-    {
-     "h": 2,
-     "v": 6,
-     "file": "media/narration/short-voice/02-06.mp3",
-     "dur": 22.22
-    },
-    {
-     "h": 2,
-     "v": 7,
-     "file": "media/narration/short-voice/02-07.mp3",
-     "dur": 41.28
-    },
-    {
-     "h": 2,
-     "v": 8,
-     "file": "media/narration/short-voice/02-08.mp3",
-     "dur": 32.08
-    },
-    {
-     "h": 2,
-     "v": 9,
-     "file": "media/narration/short-voice/02-09.mp3",
-     "dur": 40.48
-    },
-    {
-     "h": 2,
-     "v": 10,
-     "file": "media/narration/short-voice/02-10.mp3",
-     "dur": 45.42
-    }
-   ]
-  },
-  {
    "id": "short-clone",
-   "label": "Phone drop \u00b7 AI clone of my voice",
+   "label": "Short version",
    "slides": [
     {
      "h": 1,
@@ -158,7 +80,7 @@
   },
   {
    "id": "full",
-   "label": "Full talk \u00b7 my recording",
+   "label": "Long version",
    "slides": [
     {
      "h": 1,

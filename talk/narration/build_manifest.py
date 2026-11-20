@@ -12,9 +12,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parents[1]
 MEDIA = HERE / "public" / "media" / "narration"
 VERSIONS = [
-    ("short-voice", "Phone drop · AI voice"),
-    ("short-clone", "Phone drop · AI clone of my voice"),
-    ("full", "Full talk · my recording"),
+    ("short-clone", "Short version"),
+    ("full", "Long version"),
 ]
 
 def duration(p):

@@ -306,7 +306,7 @@ Details in [`talk/README.md`](talk/README.md).
 - [x] **Narrate the talk:** one audio clip per slide (`talk/public/media/narration/`, 49 min), cut from a
       recorded rehearsal with the fillers and long pauses removed; the deck's ▶ Play button plays them
       and moves on by itself.
-- [ ] **A short cut** of the talk (about 15 minutes, main path only) for a first look.
+- [x] **A short version** of the talk (8 min, the phone drop only), next to the long version in the ▶ Play menu.
 - [ ] **Give `src/fetch_models.py` a working source.** The OpenRadioss wiki space it downloads
       from is now locked (the OpenRadioss site redirects to Siemens), so the download fails. The
       SHA-256 checks stay valid. Options: a new official URL, or ship the four decks in the
